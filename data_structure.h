@@ -1,5 +1,5 @@
 //last updated on 1,3,2020
-//å¯ä»¥åœ¨ä¸»å‡½æ•°ä¸­ç”¨Help(cout)æ¥è¾“å‡ºå¸®åŠ©å’Œæç¤º 
+//¿ÉÒÔÔÚÖ÷º¯ÊıÖĞÓÃHelp(cout)À´Êä³ö°ïÖúºÍÌáÊ¾ 
 #ifndef _DATA_STRUCTURE_H_
 #define _DATA_STRUCTURE_H_
 #include <iostream>
@@ -10,11 +10,11 @@
 using namespace std;
 void Help(ostream &of)
 {
-	of<<"ç›®å‰æ”¯æŒçš„å‡½æ•°ï¼š"<<endl;
-	of<<"ReadNum\tè¾“å…¥æ•´æ•°ï¼ˆintæˆ–long longï¼‰"<<endl;
+	of<<"Ä¿Ç°Ö§³ÖµÄº¯Êı£º"<<endl;
+	of<<"ReadNum\tÊäÈëÕûÊı£¨int»òlong long£©"<<endl;
 	of<<endl;	
-	of<<"ç›®å‰æ”¯æŒçš„æ•°æ®ç»“æ„ï¼š"<<endl;
-	of<<"UFSET\tå¹¶æŸ¥é›†"<<endl;
+	of<<"Ä¿Ç°Ö§³ÖµÄÊı¾İ½á¹¹£º"<<endl;
+	of<<"UFSET\t²¢²é¼¯"<<endl;
 }
 inline void ReadNum(int &s)
 {
@@ -88,10 +88,8 @@ class SEGTREENODE
 class SEGTREEB
 {
 	public:
-		NUM size;
-		vector<NUM> tree;
-		
-};
+		NUM 
+}
 //class SEGTREEA
 //{
 //	public:
