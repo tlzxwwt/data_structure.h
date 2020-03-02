@@ -60,6 +60,7 @@ class UFSET
 		UFSET(int a=10010)
 		{
 			size=a;
+			father.push_back(0);
 			for(int i=1;i<=size;i++)
 			{
 				father.push_back(i);
