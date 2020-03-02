@@ -1,4 +1,4 @@
-//last updated on 1,3,2020
+//last updated on 2,3,2020
 //可以在主函数中用Help(cout)来输出帮助和提示 
 #ifndef _DATA_STRUCTURE_H_
 #define _DATA_STRUCTURE_H_
@@ -101,6 +101,8 @@ class SEGTREEA
 	public:
 		int size;
 		NUM (*f)(NUM,NUM);
+		NUM ans;
+		bool ansed;
 		vector<SEGTREENODE> tree;
 		void BuildTree(int pos,int l,int r,NUM a[])
 		{
@@ -131,7 +133,28 @@ class SEGTREEA
 		void Change(const int &k,const NUM &v)
 		{
 			Change(1,k,v);
-		}				
+		}
+		void Answer(int pos,const int &l,const int &r)
+		{
+			if(tree[pos].l>=l&&tree[pos].r<=r)
+			{
+				if(!ansed)
+				{
+					ansed=1;
+					ans=tree[pos].v;
+				}
+				else ans=f(ans,tree[pos].v);
+				return;
+			}
+			if(tree[pos].m>=l) Answer(pos*2,l,r);
+			if(tree[pos].m<r) Answer(pos*2+1,l,r);			
+		}		
+		NUM Answer(const int &l,const int &r)
+		{
+			ansed=0;
+			Answer(1,l,r);
+			return ans;
+		}		
 };
 class SEGTREEB
 {
